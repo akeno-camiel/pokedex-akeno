@@ -1,0 +1,15 @@
+header{
+    height: 5vh;
+    nav{
+        ul{
+            @include flex(flex, space-evenly, center, row);
+            list-style: none;
+            padding-top: 15px;
+            li{
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

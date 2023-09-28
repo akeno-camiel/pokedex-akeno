@@ -1,0 +1,130 @@
+@mixin flex ($flex, $justify, $align, $direction) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align ;
+    flex-direction: $direction ;
+}
+
+@mixin fuente ($fuente, $ancho, $size) {
+    font-family: $fuente;
+    font-weight: $ancho;
+    font-size: $size;
+}
+
+@mixin bg ($bg-position, $bg-size, $bg-repeat) {
+    background-position: $bg-position;
+    background-size: $bg-size;
+    background-repeat: $bg-repeat;
+}
+
+%info {
+    background-color: gray;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%hierba {
+    background-color: #159d45;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%veneno {
+    background-color: #831fd5;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%fuego{
+    background-color: #ff0000;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%volador{
+    background-color: #84c5f3;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+}
+
+%agua{
+    background-color: #488eea;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%electrico{
+    background-color: #ffff00;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+}
+
+%bicho{
+    background-color: #ADBD2E;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+}
+
+%normal{
+    background-color: #B9B7AA;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+}
+
+%tierra{
+    background-color: #794A30;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%hada{
+    background-color: #F3A8EC;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+}
+
+%lucha{
+    background-color: #db5433;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%psiquico{
+    background-color: #ee306c;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%roca{
+    background-color: #B59C52;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}
+
+%acero{
+    background-color: #C2C1C3;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+}
+
+%hielo{
+    background-color: #7ADEFF;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+}
+
+%fantasma{
+    background-color: #825cc1;
+    border-radius: 100px;
+    padding: 0.25rem 0.5rem;
+    color: white;
+}

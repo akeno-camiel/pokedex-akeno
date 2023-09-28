@@ -1,0 +1,208 @@
+main {
+    .menu-retractil {
+        @include flex (flex, center, flex-end, column);
+        flex-wrap: wrap;
+
+        .types {
+            .planta {
+                @extend %hierba;
+            }
+
+            .fuego {
+                @extend %fuego;
+            }
+
+            .agua {
+                @extend %agua;
+            }
+
+            .bicho {
+                @extend %bicho;
+            }
+
+            .veneno {
+                @extend %veneno;
+            }
+
+            .volador {
+                @extend %volador;
+            }
+
+            .normal {
+                @extend %normal;
+            }
+
+            .electrico {
+                @extend %electrico;
+            }
+
+            .tierra {
+                @extend %tierra;
+            }
+
+            .hada {
+                @extend %hada;
+            }
+
+            .lucha {
+                @extend %lucha;
+            }
+
+            .psiquico {
+                @extend %psiquico;
+            }
+
+            .roca {
+                @extend %roca;
+            }
+
+            .acero {
+                @extend %acero;
+            }
+
+            .hielo {
+                @extend %hielo;
+            }
+
+            .fantasma {
+                @extend %fantasma;
+            }
+
+            button {
+                border-radius: 100px;
+                border-color: none;
+                margin: 1rem 1rem 0 0.5rem;
+            }
+        }
+
+        .buscador {
+            input {}
+        }
+    }
+
+    .poke-pokemon {
+        padding: 20px 0 0 40px;
+        @include flex (flex, center, none, row);
+        flex-wrap: wrap;
+
+        .poke-card {
+            margin: 50px 0 50px 0;
+
+            .poke-pokemon-card {
+                text-align: center;
+                width: 80%;
+                @include bg (center, cover, none);
+                box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                position: relative;
+                transition: 250ms;
+
+                &hover {}
+
+
+                .n-fondo {
+                    color: rgba(6, 6, 6, 0.232);
+                    position: absolute;
+                    top: 5%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: -2;
+                    font-size: 9rem;
+                }
+
+                .poke-pokemon-img {
+                    img {
+                        width: 50%;
+                    }
+                }
+
+                .poke-pokemon-data {
+                    @include flex (flex, space-around, center, column);
+
+                    .poke-pokemon-data-nombre {
+                        @include flex (flex, space-evenly, center, row);
+                        border: solid 2px green;
+                        border-radius: 10px;
+                        width: 80%
+                    }
+
+                    .poke-pokemon-data-types {
+                        @include flex (flex, space-evenly, center, row);
+                        width: 100%;
+                        margin: 1rem 0 1rem 0;
+
+                        .pokemon-hierba {
+                            @extend %hierba;
+                        }
+
+                        .pokemon-veneno {
+                            @extend %veneno;
+                        }
+
+                        .pokemon-fuego {
+                            @extend %fuego;
+                        }
+
+                        .pokemon-volador {
+                            @extend %volador;
+                        }
+
+                        .pokemon-agua {
+                            @extend %agua;
+                        }
+                    }
+
+                    .poke-pokemon-data-info {
+                        @include flex (flex, space-evenly, center, row);
+                        width: 100%;
+                        margin-bottom: 1rem;
+
+                        .pokemon-info {
+                            @extend %info
+                        }
+                    }
+                }
+            }
+
+            .poke-equipo-card {
+                text-align: center;
+                width: 80%;
+                box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                padding: 10px;
+
+                .poke-equipo-img {
+                    @include flex (flex, none, center, row);
+                    img {
+                        width: 50%;
+                    }
+                }
+                .poke-equipo-data{
+                    @include flex (flex, none, none, column);
+
+                    .poke-equipo-data-nombre {
+                        @include flex (flex, space-evenly, center, row);
+                        border: solid 2px green;
+                        border-radius: 10px;
+                        width: 50%;
+                    }
+                    .poke-equipo-data-types {
+                        @include flex (flex, space-evenly, center, row);
+                        width: 100%;
+                        margin: 1rem 0 1rem 0;
+
+                        .pokemon-hierba {
+                            @extend %hierba;
+                        }
+
+                        .pokemon-veneno {
+                            @extend %veneno;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

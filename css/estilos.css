@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-info .pokemon-info {
+  background-color: gray;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .planta, main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-types .pokemon-hierba, main .poke-pokemon .poke-card .poke-equipo-card .poke-equipo-data .poke-equipo-data-types .pokemon-hierba {
+  background-color: #159d45;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .veneno, main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-types .pokemon-veneno, main .poke-pokemon .poke-card .poke-equipo-card .poke-equipo-data .poke-equipo-data-types .pokemon-veneno {
+  background-color: #831fd5;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .fuego, main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-types .pokemon-fuego {
+  background-color: #ff0000;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .volador, main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-types .pokemon-volador {
+  background-color: #84c5f3;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem; }
+
+main .menu-retractil .types .agua, main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-types .pokemon-agua {
+  background-color: #488eea;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .electrico {
+  background-color: #ffff00;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem; }
+
+main .menu-retractil .types .bicho {
+  background-color: #ADBD2E;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem; }
+
+main .menu-retractil .types .normal {
+  background-color: #B9B7AA;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem; }
+
+main .menu-retractil .types .tierra {
+  background-color: #794A30;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .hada {
+  background-color: #F3A8EC;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem; }
+
+main .menu-retractil .types .lucha {
+  background-color: #db5433;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .psiquico {
+  background-color: #ee306c;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .roca {
+  background-color: #B59C52;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+main .menu-retractil .types .acero {
+  background-color: #C2C1C3;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem; }
+
+main .menu-retractil .types .hielo {
+  background-color: #7ADEFF;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem; }
+
+main .menu-retractil .types .fantasma {
+  background-color: #825cc1;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  color: white; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px; }
+
+header {
+  height: 5vh; }
+  header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    padding-top: 15px; }
+    header nav ul li a {
+      text-decoration: none; }
+
+main .menu-retractil {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  main .menu-retractil .types button {
+    border-radius: 100px;
+    border-color: none;
+    margin: 1rem 1rem 0 0.5rem; }
+
+main .poke-pokemon {
+  padding: 20px 0 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  main .poke-pokemon .poke-card {
+    margin: 50px 0 50px 0; }
+    main .poke-pokemon .poke-card .poke-pokemon-card {
+      text-align: center;
+      width: 80%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: none;
+      box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+      -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+      -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+      position: relative;
+      transition: 250ms; }
+      main .poke-pokemon .poke-card .poke-pokemon-card .n-fondo {
+        color: rgba(6, 6, 6, 0.232);
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -2;
+        font-size: 9rem; }
+      main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-img img {
+        width: 50%; }
+      main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column; }
+        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: row;
+          border: solid 2px green;
+          border-radius: 10px;
+          width: 80%; }
+        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-types {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: row;
+          width: 100%;
+          margin: 1rem 0 1rem 0; }
+        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-info {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: row;
+          width: 100%;
+          margin-bottom: 1rem; }
+    main .poke-pokemon .poke-card .poke-equipo-card {
+      text-align: center;
+      width: 80%;
+      box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+      -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+      -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+      padding: 10px; }
+      main .poke-pokemon .poke-card .poke-equipo-card .poke-equipo-img {
+        display: flex;
+        justify-content: none;
+        align-items: center;
+        flex-direction: row; }
+        main .poke-pokemon .poke-card .poke-equipo-card .poke-equipo-img img {
+          width: 50%; }
+      main .poke-pokemon .poke-card .poke-equipo-card .poke-equipo-data {
+        display: flex;
+        justify-content: none;
+        align-items: none;
+        flex-direction: column; }
+        main .poke-pokemon .poke-card .poke-equipo-card .poke-equipo-data .poke-equipo-data-nombre {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: row;
+          border: solid 2px green;
+          border-radius: 10px;
+          width: 50%; }
+        main .poke-pokemon .poke-card .poke-equipo-card .poke-equipo-data .poke-equipo-data-types {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: row;
+          width: 100%;
+          margin: 1rem 0 1rem 0; }
+
+.body-pokedex {
+  background-image: url(/img/fondo-pokemon.png);
+  background-size: 75%; }
+  .body-pokedex main .pokedex {
+    margin-top: 5%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
+    .body-pokedex main .pokedex img {
+      height: 100%;
+      position: relative; }
+    .body-pokedex main .pokedex .poke-bg {
+      position: absolute;
+      top: 44%;
+      left: 32%;
+      height: 21vh;
+      width: 31vh;
+      z-index: -2; }

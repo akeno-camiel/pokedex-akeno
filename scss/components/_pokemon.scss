@@ -1,0 +1,23 @@
+.body-pokedex{
+    background-image: url(/img/fondo-pokemon.png);
+    background-size: 75%;
+    main{
+        .pokedex{
+            margin-top: 5%;
+            height: 70vh;
+            @include flex (flex, center, center, row);
+            img{
+                height: 100%;
+                position: relative;
+            }
+            .poke-bg{
+                position: absolute;
+                top: 44%;
+                left: 32%;
+                height: 21vh;
+                width: 31vh;
+                z-index: -2;
+            }
+        }
+    }
+}
