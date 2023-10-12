@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/index.js" defer></script>
     <title>Pokedex</title>
 </head>
+
 <body class="body-pokedex">
     <header>
         <nav>
-            <li><a href="../index.html">Pokedex</a></li>
-            <li><a href="./pokedex.html">Pokemon</a></li>
-            <li><a href="./ficha.html">Nombre</a></li>
-            <li><a href="./equipo.html">Equipo</a></li>
+            <ul>
+                <li><a href="../index.html">Pokedex</a></li>
+                <li><a href="pokedex.html">Pokemon</a></li>
+                <li><a href="ficha.html">Nombre</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <div class="pokedex">
-            <img src="../img/pokedex.png" alt="">
-            <img src="../img/bg-ruta.jpg" alt="" class="poke-bg">
+            <img class="pokedex-img" src="../img/pokedex.png" alt="pokedex">
+            <img class="poke-bg" src="../img/bg-ruta.jpg" alt="">
+            <img class="pokemon-pkx"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif"
+                alt="pokemon">
+            <div class="poke-pokedex">
+                <h1 class="poke-pokedex-pokemon">
+                    <span class="poke-pokedex-pokemon-numero">1</span> -
+                    <span class="poke-pokedex-pokemon-nombre">bulbasaur</span>
+                </h1>
+                <p class="poke-pokedex-pokemon-descripcion">Este Pokémon nace con una semilla en el lomo, que brota
+                    con el paso del tiempo.</p>
+            </div>
+            <form class="formulario">
+                <input class="buscador-pokedex" type="search" placeholder="Busca tu pokemon" required>
+            </form>
+            <div class="prev-next">
+                <button class="anterior">Anterior</button>
+                <button class="siguiente">Siguiente</button>
+            </div>
         </div>
     </main>
-    <script src="../js/main.js"></script>
 </body>
+
 </html>

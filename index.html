@@ -15,230 +15,37 @@
                 <li><a href="./index.html">Pokedex</a></li>
                 <li><a href="./pages/pokedex.html">Pokemon</a></li>
                 <li><a href="./pages/ficha.html">Nombre</a></li>
-                <li><a href="./pages/equipo.html">Equipo</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="menu-retractil">
-            <div class="buscador">
-                <input type="text">
-            </div>
+        <section class="menu-retractil active">
+            <form class="buscador-pokemon">
+                <input id="buscador-pokemon-index" class="buscador-pokemon-index" type="search" placeholder="Busca tu pokemon" required>
+            </form>
             <div class="types">
-                <button class="planta">Planta</button>
-                <button class="fuego">Fuego</button>
-                <button class="agua">Agua</button>
-                <button class="bicho">Bicho</button>
-                <button class="veneno">Veneno</button>
-                <button class="volador">Volador</button>
-                <button class="normal">Normal</button>
-                <button class="electrico">Electrico</button>
-                <button class="tierra">Tierra</button>
-                <button class="hada">Hada</button>
-                <button class="lucha">Lucha</button>
-                <button class="psiquico">Psiquico</button>
-                <button class="roca">Roca</button>
-                <button class="acero">Acero</button>
-                <button class="hielo">Hielo</button>
-                <button class="fantasma">Fantasma</button>
+                <button class="btn-tipo hierba">Hierba</button>
+                <button class="btn-tipo fuego">Fuego</button>
+                <button class="btn-tipo agua">Agua</button>
+                <button class="btn-tipo bicho">Bicho</button>
+                <button class="btn-tipo veneno">Veneno</button>
+                <button class="btn-tipo volador">Volador</button>
+                <button class="btn-tipo normal">Normal</button>
+                <button class="btn-tipo electrico">Electrico</button>
+                <button class="btn-tipo tierra">Tierra</button>
+                <button class="btn-tipo hada">Hada</button>
+                <button class="btn-tipo lucha">Lucha</button>
+                <button class="btn-tipo psiquico">Psiquico</button>
+                <button class="btn-tipo roca">Roca</button>
+                <button class="btn-tipo acero">Acero</button>
+                <button class="btn-tipo hielo">Hielo</button>
+                <button class="btn-tipo fantasma">Fantasma</button>
             </div>
         </section>
         <section class="poke-pokemon">
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#001</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#001</p>
-                            <h2 class="nombre">Bulbasaur</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-hierba">Hierba</p>
-                            <p class="pokemon-veneno">Veneno</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">0,7 M</p>
-                            <p class="pokemon-info">6,9 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#002</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#002</p>
-                            <h2 class="nombre">Ivysaur</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-hierba">Hierba</p>
-                            <p class="pokemon-veneno">Veneno</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">1,0 M</p>
-                            <p class="pokemon-info">13,0 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#003</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#003</p>
-                            <h2 class="nombre">Venasaur</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-hierba">Hierba</p>
-                            <p class="pokemon-veneno">Veneno</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">2,0 M</p>
-                            <p class="pokemon-info">100,0 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#004</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#004</p>
-                            <h2 class="nombre">Charmander</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-fuego">Fuego</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">0,6 M</p>
-                            <p class="pokemon-info">8,5 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#005</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#005</p>
-                            <h2 class="nombre">Charmeleon</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-fuego">Fuego</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">1,1 M</p>
-                            <p class="pokemon-info">19,0 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#006</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#006</p>
-                            <h2 class="nombre">Charizard</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-fuego">Fuego</p>
-                            <p class="pokemon-volador">Volador</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">1,7 M</p>
-                            <p class="pokemon-info">90,5 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#007</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#007</p>
-                            <h2 class="nombre">Squirtle</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-agua">Agua</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">0,5 M</p>
-                            <p class="pokemon-info">9,0 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#008</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#008</p>
-                            <h2 class="nombre">Wartortle</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-agua">Agua</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">1,0 M</p>
-                            <p class="pokemon-info">22,5 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="poke-card">
-                <div class="poke-pokemon-card">
-                    <p class="n-fondo">#009</p>
-                    <div class="poke-pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png" alt="Bulbasaur">
-                    </div>
-                    <div class="poke-pokemon-data">
-                        <div class="poke-pokemon-data-nombre">
-                            <p class="n-frente">#009</p>
-                            <h2 class="nombre">Blastoise</h2>
-                        </div>
-                        <div class="poke-pokemon-data-types">
-                            <p class="pokemon-agua">Agua</p>
-                        </div>
-                        <div class="poke-pokemon-data-info">
-                            <p class="pokemon-info">1,6 M</p>
-                            <p class="pokemon-info">85,5 KG</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
+    <script src="./js/index.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

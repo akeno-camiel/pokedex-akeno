@@ -1,10 +1,32 @@
 main {
     .menu-retractil {
+        position: relative;
         @include flex (flex, center, flex-end, column);
-        flex-wrap: wrap;
+        padding: 2.5rem;
+        height: max-content;
+        box-shadow:
+            0px 16.7px 15.3px -43px rgba(0, 0, 0, 0.146),
+            0px 30.5px 42.2px -43px rgba(0, 0, 0, 0.21),
+            0px 40.4px 101.6px -70px rgba(0, 0, 0, 0.274);
+
+        .buscador-pokemon {
+            position: absolute;
+            bottom: 2%;
+            left: 50%;
+            transform: translateX(-35%);
+
+            .buscador-pokemon-index {
+                width: 80%;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
 
         .types {
-            .planta {
+            @include flex (flex, center, none, row);
+            flex-wrap: wrap;
+
+            .hierba {
                 @extend %hierba;
             }
 
@@ -70,13 +92,19 @@ main {
 
             button {
                 border-radius: 100px;
-                border-color: none;
-                margin: 1rem 1rem 0 0.5rem;
-            }
-        }
+                border: none;
+                margin: 1rem;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: 600;
+                box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+                transition: 0.3s;
 
-        .buscador {
-            input {}
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+                }
+            }
         }
     }
 
@@ -86,51 +114,137 @@ main {
         flex-wrap: wrap;
 
         .poke-card {
-            margin: 50px 0 50px 0;
+            margin: 50px;
+
+            .fondo-hierba {
+                background-image: url(../img/fondo-hojas.jpg);
+                @include bg (center, cover, none);
+                background-color: #0a8f3973;
+                backdrop-filter: blur(7.1px);
+                -webkit-backdrop-filter: blur(7.1px);
+            }
+
+            .fondo-fuego {
+                background-image: url(../img/fondo-fuego.jpg);
+                @include bg (center, cover, none);
+                background-color: #bb252573;
+            }
+
+            .fondo-agua {
+                background-image: url(../img/fondo-agua.jpg);
+                @include bg (center, cover, none);
+                background-color: #2974c973;
+            }
 
             .poke-pokemon-card {
                 text-align: center;
-                width: 80%;
-                @include bg (center, cover, none);
+                width: 20vw;
                 box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
                 -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
                 -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
                 position: relative;
                 transition: 250ms;
 
-                &hover {}
+                &:active .poke-pokemon-data-back {
+                    display: grid;
+                }
 
+                &:active .poke-pokemon-img {
+                    img {
+                        display: none;
+                    }
+                }
 
-                .n-fondo {
-                    color: rgba(6, 6, 6, 0.232);
-                    position: absolute;
-                    top: 5%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    z-index: -2;
-                    font-size: 9rem;
+                &:active {
+                    background-image: none;
                 }
 
                 .poke-pokemon-img {
+                    backdrop-filter: blur(2px);
+                    -webkit-backdrop-filter: blur(2px);
+
                     img {
-                        width: 50%;
+                        width: 70%;
+
                     }
                 }
 
                 .poke-pokemon-data {
                     @include flex (flex, space-around, center, column);
+                    position: relative;
 
-                    .poke-pokemon-data-nombre {
+                    .poke-pokemon-data-nombre-hierba-veneno {
                         @include flex (flex, space-evenly, center, row);
-                        border: solid 2px green;
-                        border-radius: 10px;
-                        width: 80%
+                        background: linear-gradient(347deg, rgba(131, 31, 213, 1) 36%, #159d45 59%);
+                        padding: 0.5rem;
+                        width: 100%;
                     }
 
-                    .poke-pokemon-data-types {
+                    .poke-pokemon-data-nombre-fuego {
                         @include flex (flex, space-evenly, center, row);
+                        background-color: #ff0000;
+                        padding: 0.5rem;
                         width: 100%;
-                        margin: 1rem 0 1rem 0;
+                    }
+
+                    .poke-pokemon-data-nombre-fuego-volador {
+                        @include flex (flex, space-evenly, center, row);
+                        background: linear-gradient(0deg, rgba(132, 197, 243, 1) 36%, rgba(255, 0, 0, 1) 59%);
+                        padding: 0.5rem;
+                        width: 100%;
+                    }
+
+                    .poke-pokemon-data-nombre-agua {
+                        @include flex (flex, space-evenly, center, row);
+                        background-color: #488eea;
+                        padding: 0.5rem;
+                        width: 100%;
+                    }
+
+                    .poke-pokemon-data-ball {
+                        img {
+                            position: absolute;
+                            top: 0.2rem;
+                            right: 0.5rem;
+                            width: 10%
+                        }
+
+                        .pokeball-semi {
+                            display: none;
+                        }
+
+                        &:hover {
+                            .pokeball-cerrada {
+                                display: none;
+                            }
+
+                            .pokeball-semi {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .poke-pokemon-data-back {
+                display: none;
+
+                .poke-pokemon-data-types {
+                    @include flex (flex, space-evenly, center, row);
+                    width: 100%;
+                    margin: 1rem 0 1rem 0;
+
+                    .tipo {
+                        color: white;
+                    }
+
+                    .poke-pokemon-data-types-div {
+                        background-color: rgba(255, 255, 255, 0.473);
+                        width: auto;
+                        border-radius: 20px;
+                        padding: 5px;
+                        @include flex (flex, center, center, row);
+                        flex-wrap: wrap;
 
                         .pokemon-hierba {
                             @extend %hierba;
@@ -148,58 +262,40 @@ main {
                             @extend %volador;
                         }
 
+                        .pokemon-psiquico {
+                            @extend %psiquico;
+                        }
+
+                        .pokemon-hielo {
+                            @extend %hielo;
+                        }
+
                         .pokemon-agua {
                             @extend %agua;
                         }
-                    }
 
-                    .poke-pokemon-data-info {
-                        @include flex (flex, space-evenly, center, row);
-                        width: 100%;
-                        margin-bottom: 1rem;
+                        .pokemon-tierra {
+                            @extend %tierra;
+                        }
 
-                        .pokemon-info {
-                            @extend %info
+                        .pokemon-roca {
+                            @extend %roca;
+                        }
+
+                        .pokemon-electrico {
+                            @extend %electrico;
                         }
                     }
+
                 }
-            }
 
-            .poke-equipo-card {
-                text-align: center;
-                width: 80%;
-                box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
-                -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
-                -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
-                padding: 10px;
+                .poke-pokemon-data-info {
+                    @include flex (flex, space-evenly, center, row);
+                    width: 100%;
+                    margin-bottom: 1rem;
 
-                .poke-equipo-img {
-                    @include flex (flex, none, center, row);
-                    img {
-                        width: 50%;
-                    }
-                }
-                .poke-equipo-data{
-                    @include flex (flex, none, none, column);
-
-                    .poke-equipo-data-nombre {
-                        @include flex (flex, space-evenly, center, row);
-                        border: solid 2px green;
-                        border-radius: 10px;
-                        width: 50%;
-                    }
-                    .poke-equipo-data-types {
-                        @include flex (flex, space-evenly, center, row);
-                        width: 100%;
-                        margin: 1rem 0 1rem 0;
-
-                        .pokemon-hierba {
-                            @extend %hierba;
-                        }
-
-                        .pokemon-veneno {
-                            @extend %veneno;
-                        }
+                    .pokemon-info {
+                        @extend %info
                     }
                 }
             }

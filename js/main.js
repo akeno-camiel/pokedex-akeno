@@ -1,52 +1,47 @@
-class Personaje {
-    constructor(nombre, edad, genero, colorDePelo, colorDeOjos) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.genero = genero;
-        this.colorDePelo = colorDePelo;
-        this.colorDeOjos = colorDeOjos;
-        this.saludar = function () {
-            console.log("Hola " + nombre + "!");
-        }
-    }
 
-    confirmar() {
-        let datosCorrectos = false;
+document.addEventListener("DOMContentLoaded", function() {
+function guardarDatos() {
+    const nombre = document.getElementById("nombreInput").value;
+    const edad = document.getElementById("edadInput").value;
+    const ojos = document.getElementById("ojosInput").value;
+    const pelo = document.getElementById("peloInput").value;
 
-        while (!datosCorrectos) {
-            const respuesta = confirm(
-                "¿Estos datos son correctos?\n" +
-                "Edad: " + this.edad
-            );
+    const entrenador = {
+        nombre,
+        edad,
+        ojos,
+        pelo
+    };
 
-            if (!respuesta) {
-                this.edad = prompt("Ingrese su edad nuevamente");
-            } else {
-                let confirmacionEdad = false;
+    localStorage.setItem("entrenador", JSON.stringify(entrenador));
+}
 
-                while (!confirmacionEdad) {
-                    confirmacionEdad = confirm("¿La edad es correcta?\n" + "Edad: " + this.edad);
-                    if (!confirmacionEdad) {
-                        this.edad = prompt("Ingrese su edad nuevamente");
-                    }
-                }
-                datosCorrectos = true;
-            }
-        }
+function cargarDatos() {
+    const entrenadorJSON = localStorage.getItem("entrenador");
+
+    if (entrenadorJSON) {
+        const entrenador = JSON.parse(entrenadorJSON);
+        document.getElementById("nombreInput").value = entrenador.nombre;
+        document.getElementById("edadInput").value = entrenador.edad;
+        document.getElementById("ojosInput").value = entrenador.ojos;
+        document.getElementById("peloInput").value = entrenador.pelo;
     }
 }
 
-const personaje1 = new Personaje(
-    prompt("Ingrese su nombre"),
-    prompt("Ingrese su edad"),)
-// prompt("Ingrese su genero"),
-// prompt("Ingrese su color de pelo"),
-// prompt("Ingrese su color de ojos")); 
+function resetearDatos() {
+    document.getElementById("nombreInput").value = "";
+    document.getElementById("edadInput").value = "";
+    document.getElementById("ojosInput").value = "";
+    document.getElementById("peloInput").value = "";
+    localStorage.removeItem("entrenador");
+}
 
-personaje1.saludar();
+cargarDatos();
 
-personaje1.confirmar();
+document.getElementById("guardarDatosBtn").addEventListener("click", guardarDatos);
+document.getElementById("resetDatosBtn").addEventListener("click", resetearDatos);
 
+});
 
 function Pokemon(nombre, numeroPokedex, altura, peso, descripcion, tipo, debilidad) {
     this.nombrePoke = nombre;
@@ -59,23 +54,13 @@ function Pokemon(nombre, numeroPokedex, altura, peso, descripcion, tipo, debilid
 }
 const pokemons = [
     new Pokemon(
-        "pikachu",
-        25,
-        "0,4 m",
-        "6,0 kg",
-        "Cuando se enfada, este Pokémon descarga la energía que almacena en el interior de las bolsas de las mejillas.",
-        "eléctrico",
-        "tierra",
-    ),
-
-    new Pokemon(
         "bulbasaur",
         1,
         "0,7 m",
         "6,9 kg",
         "Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo.",
         ["hierba", "veneno"],
-        ["fuego", "psíquico", "volador", "hielo"]
+        ["fuego", "psiquico", "volador", "hielo"]
     ),
     new Pokemon(
         "ivysaur",
@@ -84,7 +69,7 @@ const pokemons = [
         "13,0 kg",
         "Cuando le crece bastante el bulbo del lomo, pierde la capacidad de erguirse sobre las patas traseras.",
         ["hierba", "veneno"],
-        ["fuego", "psíquico", "volador", "hielo"]
+        ["fuego", "psiquico", "volador", "hielo"]
     ),
     new Pokemon(
         "venasaur",
@@ -93,7 +78,7 @@ const pokemons = [
         "100,0 kg",
         "La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol.",
         ["hierba", "veneno"],
-        ["fuego", "psíquico", "volador", "hielo"]
+        ["fuego", "psiquico", "volador", "hielo"]
     ),
 
     new Pokemon(
@@ -123,7 +108,7 @@ const pokemons = [
         "90,5 kg",
         "Se dice que el fuego de Charizard arde con más fuerza cuantas más duras batallas haya vivido.",
         ["fuego", "volador"],
-        ["agua", "eléctrico", "roca x4"]
+        ["agua", "electrico", "roca x4"]
     ),
 
     new Pokemon(
@@ -133,7 +118,7 @@ const pokemons = [
         "9,0 kg",
         "Cuando retrae su largo cuello en el caparazón, dispara agua a una presión increíble.",
         "agua",
-        ["planta", "eléctrico"]
+        ["hierba", "electrico"]
     ),
 
     new Pokemon(
@@ -143,7 +128,7 @@ const pokemons = [
         "22,5 kg",
         "Se lo considera un símbolo de longevidad. Los ejemplares más ancianos tienen musgo sobre el caparazón.",
         "agua",
-        ["planta", "eléctrico"]
+        ["hierba", "electrico"]
     ),
 
     new Pokemon(
@@ -153,39 +138,88 @@ const pokemons = [
         "85,5 kg",
         "Para acabar con su enemigo, lo aplasta con el peso de su cuerpo. En momentos de apuro, se esconde en el caparazón.",
         "agua",
-        ["planta", "eléctrico"]
+        ["hierba", "electrico"]
     )
 ]
 
+const tarjetaPokemon = document.querySelector(".poke-pokemon");
 
-let tipo = prompt("¿Qué tipo de pokemon buscas?").toLowerCase();
-let numero = Number(prompt("N° de Pokemon"));
-let nombrePoke = prompt("¿Qué nombre de pokemon buscas?").toLowerCase();
+function mostrarPokemon(pokemon) {
+    const div = document.createElement("div");
+    div.classList.add("poke-card");
+    const tipoDiv = Array.isArray(pokemon.tipo) ? pokemon.tipo : [pokemon.tipo];
+    const tipoClases = tipoDiv.map(tipo => `${tipo.toLowerCase()}`).join('-');
 
-function verPokemon(pokemons) {
-    pokemons.forEach(pokemon => console.log("Pokemon n° " + pokemon.numeroPokedex + " - Nombre: " + pokemon.nombrePoke + " - altura: " + pokemon.altura + " - peso: " + pokemon.peso + " - Descripción: " + pokemon.descripcion + " - tipos: " + pokemon.tipo + " - es debil ante: " + pokemon.debilidad))
+    div.innerHTML = `
+    <div class="poke-pokemon-card fondo-${tipoDiv[0]}">
+        <div class="poke-pokemon-data">
+            <div class="poke-pokemon-data-nombre-${tipoClases}">
+                <h2 class="nombre">${pokemon.nombrePoke}</h2>
+                <p class="n-frente">#${pokemon.numeroPokedex}</p>
+            </div>
+            <div class="poke-pokemon-data-ball">
+                <a href=""><img src="./img/pokeball-cerrada.png" alt="pokeball-cerrada"></a>
+                <a href=""><img class="pokeball-semi" src="./img/pokeball-semi.png" alt="pokeball-semi"></a>
+            </div>
+        </div>
+        <div class="poke-pokemon-data-back">
+            <div class="poke-pokemon-data-types">
+                <p class="tipo">Tipo: </p>
+                <div class="poke-pokemon-data-types-div">
+                    ${Array.isArray(pokemon.tipo) ? pokemon.tipo.map(tipo => `<p class="pokemon-${tipo}">${tipo}</p>`).join('') : `<p class="pokemon-${pokemon.tipo}">${pokemon.tipo}</p>`}
+                </div>
+            </div>
+            <div class="poke-pokemon-data-types">
+                <p class="tipo">Debilidad: </p>
+                <div class="poke-pokemon-data-types-div">
+                    ${Array.isArray(pokemon.debilidad) ? pokemon.debilidad.map(debilidad => `<p class="pokemon-${debilidad}">${debilidad}</p>`).join('') : `<p class="pokemon-${pokemon.debilidad}">${pokemon.debilidad}</p>`}
+                </div>
+            </div>
+            <div class="poke-pokemon-data-info">
+                <p class="pokemon-info">${pokemon.altura}</p>
+                <p class="pokemon-info">${pokemon.peso}</p>
+            </div>
+        </div>
+        <div class="poke-pokemon-img">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.numeroPokedex}.png" alt="${pokemon.nombrePoke}">
+        </div>
+    </div>
+    `;
+    tarjetaPokemon.append(div)
 }
 
-function filtrarPokemon() {
-    const resultado = pokemons.filter(pokemon => {
-        if (tipo || numero || nombrePoke) {
-            return pokemon.tipo === tipo || pokemon.numeroPokedex === numero || pokemon.nombrePoke === nombrePoke;
-        } else if (tipo) {
-            return pokemon.tipo === tipo;
-        } else if (numero) {
-            return pokemon.numeroPokedex === numero;
-        } else if (nombrePoke){
-            return pokemon.nombrePoke === nombrePoke;
+pokemons.forEach(pokemon => mostrarPokemon(pokemon));
+
+
+
+
+//----------------------buscadores------------------//
+const buscadorIndex = document.querySelector(".buscador-pokemon-index");
+const formIndex = document.querySelector(".buscador-pokemon");
+
+buscadorIndex.addEventListener('keydown', (evt) => {
+    if (evt.key === "Enter") {
+        evt.preventDefault();
+        const busquedaIndex = buscadorIndex.value.toLowerCase();
+        const resultado = pokemons.filter(pokemon => {
+            const nomrbrePokemon = pokemon.nombrePoke.toLowerCase();
+            const numeroPokemon = pokemon.numeroPokedex.toString();
+            return nomrbrePokemon.includes(busquedaIndex) || numeroPokemon.includes(busquedaIndex);
+        });
+        tarjetaPokemon.innerHTML = "";
+        if (resultado.length > 0) {
+            resultado.forEach(pokemon => mostrarPokemon(pokemon));
+        } else {
+            const h2 = document.createElement("h2");
+            h2.classList.add("poke-card");
+            h2.innerHTML = `<h2>Error, no hay coincidencias con su búsqueda.</h2>`
+            tarjetaPokemon.append(h2);
         }
-
-        return false;
-    });
-
-    if (resultado.length > 0) {
-        verPokemon(resultado);
-    } else {
-        console.log("Error, no hay coincidencias");
     }
-}
+});
+formIndex.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+});
 
-filtrarPokemon();
+
+
