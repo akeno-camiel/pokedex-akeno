@@ -5,47 +5,47 @@ main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-info .p
   padding: 0.25rem 0.5rem;
   color: white; }
 
-main .menu-retractil .types .hierba, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-hierba, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-types .pokemon-hierba, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-hierba {
+main .menu-retractil .types .grass, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-grass, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-types .pokemon-hierba, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-hierba {
   background-color: #159d45;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   color: white;
   margin-right: 5px; }
 
-main .menu-retractil .types .veneno, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-veneno, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-types .pokemon-veneno, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-veneno {
+main .menu-retractil .types .poison, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-poison, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-types .pokemon-veneno, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-veneno {
   background-color: #831fd5;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   color: white;
   margin-right: 5px; }
 
-main .menu-retractil .types .fuego, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-fuego, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-fuego {
+main .menu-retractil .types .fire, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-fire, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-fuego {
   background-color: #ff0000;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   color: white;
   margin-right: 5px; }
 
-main .menu-retractil .types .volador, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-volador, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-volador {
+main .menu-retractil .types .flying, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-flying, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-volador {
   background-color: #84c5f3;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   margin-right: 5px; }
 
-main .menu-retractil .types .agua, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-agua, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-agua {
+main .menu-retractil .types .water, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-water, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-agua {
   background-color: #488eea;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   color: white;
   margin-right: 5px; }
 
-main .menu-retractil .types .electrico, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-electrico, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-electrico {
+main .menu-retractil .types .electric, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-electric, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-electrico {
   background-color: #ffff00;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   margin-right: 5px; }
 
-main .menu-retractil .types .bicho {
+main .menu-retractil .types .bug {
   background-color: #ADBD2E;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
@@ -57,53 +57,53 @@ main .menu-retractil .types .normal {
   padding: 0.25rem 0.5rem;
   margin-right: 5px; }
 
-main .menu-retractil .types .tierra, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-tierra, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-tierra {
+main .menu-retractil .types .ground, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-ground, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-tierra {
   background-color: #794A30;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   color: white;
   margin-right: 5px; }
 
-main .menu-retractil .types .hada {
+main .menu-retractil .types .fairy {
   background-color: #F3A8EC;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   margin-right: 5px; }
 
-main .menu-retractil .types .lucha {
+main .menu-retractil .types .fighting {
   background-color: #db5433;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   color: white;
   margin-right: 5px; }
 
-main .menu-retractil .types .psiquico, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-psiquico, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-psiquico {
+main .menu-retractil .types .psychic, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-psychic, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-psiquico {
   background-color: #ee306c;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   color: white;
   margin-right: 5px; }
 
-main .menu-retractil .types .roca, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-roca, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-roca {
+main .menu-retractil .types .rock, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-rock, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-roca {
   background-color: #B59C52;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   color: white;
   margin-right: 5px; }
 
-main .menu-retractil .types .acero {
+main .menu-retractil .types .steel {
   background-color: #C2C1C3;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   margin-right: 5px; }
 
-main .menu-retractil .types .hielo, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-hielo, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-hielo {
+main .menu-retractil .types .ice, main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-types .poke-pokemon-data-types-div .pokemon-ice, .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div .pokemon-hielo {
   background-color: #7ADEFF;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
   margin-right: 5px; }
 
-main .menu-retractil .types .fantasma {
+main .menu-retractil .types .ghost {
   background-color: #825cc1;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
@@ -174,7 +174,7 @@ main .poke-pokemon {
   flex-wrap: wrap; }
   main .poke-pokemon .poke-card {
     margin: 50px; }
-    main .poke-pokemon .poke-card .fondo-hierba {
+    main .poke-pokemon .poke-card .fondo-grass {
       background-image: url(../img/fondo-hojas.jpg);
       background-position: center;
       background-size: cover;
@@ -182,13 +182,13 @@ main .poke-pokemon {
       background-color: #0a8f3973;
       backdrop-filter: blur(7.1px);
       -webkit-backdrop-filter: blur(7.1px); }
-    main .poke-pokemon .poke-card .fondo-fuego {
+    main .poke-pokemon .poke-card .fondo-fire {
       background-image: url(../img/fondo-fuego.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: none;
       background-color: #bb252573; }
-    main .poke-pokemon .poke-card .fondo-agua {
+    main .poke-pokemon .poke-card .fondo-water {
       background-image: url(../img/fondo-agua.jpg);
       background-position: center;
       background-size: cover;
@@ -219,7 +219,7 @@ main .poke-pokemon {
         align-items: center;
         flex-direction: column;
         position: relative; }
-        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre-hierba-veneno {
+        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre-grass-poison {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
@@ -227,7 +227,7 @@ main .poke-pokemon {
           background: linear-gradient(347deg, #831fd5 36%, #159d45 59%);
           padding: 0.5rem;
           width: 100%; }
-        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre-fuego {
+        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre-fire {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
@@ -235,7 +235,7 @@ main .poke-pokemon {
           background-color: #ff0000;
           padding: 0.5rem;
           width: 100%; }
-        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre-fuego-volador {
+        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre-fire-flying {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
@@ -243,7 +243,7 @@ main .poke-pokemon {
           background: linear-gradient(0deg, #84c5f3 36%, red 59%);
           padding: 0.5rem;
           width: 100%; }
-        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre-agua {
+        main .poke-pokemon .poke-card .poke-pokemon-card .poke-pokemon-data .poke-pokemon-data-nombre-water {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
@@ -326,9 +326,12 @@ main .poke-pokemon {
       .body-pokedex main .pokedex .poke-pokedex .poke-pokedex-pokemon {
         padding: 2px; }
         .body-pokedex main .pokedex .poke-pokedex .poke-pokedex-pokemon .poke-pokedex-pokemon-nombre {
-          text-transform: capitalize; }
+          text-transform: capitalize;
+          font-size: 90%; }
+      .body-pokedex main .pokedex .poke-pokedex .poke-pokedex-pokemon-habilidad {
+        font-size: 100%; }
       .body-pokedex main .pokedex .poke-pokedex .poke-pokedex-pokemon-descripcion {
-        font-size: 77%;
+        font-size: 75%;
         margin: 2px; }
   .body-pokedex main .formulario {
     position: absolute;

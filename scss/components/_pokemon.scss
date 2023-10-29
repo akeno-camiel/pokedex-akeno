@@ -41,10 +41,15 @@
                     padding: 2px;
                     .poke-pokedex-pokemon-nombre {
                         text-transform: capitalize;
+                        
+                    font-size: 90%;
                     }
                 }
+                .poke-pokedex-pokemon-habilidad{
+                    font-size: 100%;
+                }
                 .poke-pokedex-pokemon-descripcion {
-                    font-size: 77%;
+                    font-size: 75%;
                     margin: 2px;
                 }
             }

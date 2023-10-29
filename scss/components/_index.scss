@@ -26,27 +26,27 @@ main {
             @include flex (flex, center, none, row);
             flex-wrap: wrap;
 
-            .hierba {
+            .grass {
                 @extend %hierba;
             }
 
-            .fuego {
+            .fire {
                 @extend %fuego;
             }
 
-            .agua {
+            .water {
                 @extend %agua;
             }
 
-            .bicho {
+            .bug {
                 @extend %bicho;
             }
 
-            .veneno {
+            .poison {
                 @extend %veneno;
             }
 
-            .volador {
+            .flying {
                 @extend %volador;
             }
 
@@ -54,39 +54,39 @@ main {
                 @extend %normal;
             }
 
-            .electrico {
+            .electric {
                 @extend %electrico;
             }
 
-            .tierra {
+            .ground {
                 @extend %tierra;
             }
 
-            .hada {
+            .fairy {
                 @extend %hada;
             }
 
-            .lucha {
+            .fighting {
                 @extend %lucha;
             }
 
-            .psiquico {
+            .psychic {
                 @extend %psiquico;
             }
 
-            .roca {
+            .rock {
                 @extend %roca;
             }
 
-            .acero {
+            .steel {
                 @extend %acero;
             }
 
-            .hielo {
+            .ice {
                 @extend %hielo;
             }
 
-            .fantasma {
+            .ghost {
                 @extend %fantasma;
             }
 
@@ -116,7 +116,7 @@ main {
         .poke-card {
             margin: 50px;
 
-            .fondo-hierba {
+            .fondo-grass {
                 background-image: url(../img/fondo-hojas.jpg);
                 @include bg (center, cover, none);
                 background-color: #0a8f3973;
@@ -124,13 +124,13 @@ main {
                 -webkit-backdrop-filter: blur(7.1px);
             }
 
-            .fondo-fuego {
+            .fondo-fire {
                 background-image: url(../img/fondo-fuego.jpg);
                 @include bg (center, cover, none);
                 background-color: #bb252573;
             }
 
-            .fondo-agua {
+            .fondo-water {
                 background-image: url(../img/fondo-agua.jpg);
                 @include bg (center, cover, none);
                 background-color: #2974c973;
@@ -173,28 +173,28 @@ main {
                     @include flex (flex, space-around, center, column);
                     position: relative;
 
-                    .poke-pokemon-data-nombre-hierba-veneno {
+                    .poke-pokemon-data-nombre-grass-poison {
                         @include flex (flex, space-evenly, center, row);
                         background: linear-gradient(347deg, rgba(131, 31, 213, 1) 36%, #159d45 59%);
                         padding: 0.5rem;
                         width: 100%;
                     }
 
-                    .poke-pokemon-data-nombre-fuego {
+                    .poke-pokemon-data-nombre-fire {
                         @include flex (flex, space-evenly, center, row);
                         background-color: #ff0000;
                         padding: 0.5rem;
                         width: 100%;
                     }
 
-                    .poke-pokemon-data-nombre-fuego-volador {
+                    .poke-pokemon-data-nombre-fire-flying {
                         @include flex (flex, space-evenly, center, row);
                         background: linear-gradient(0deg, rgba(132, 197, 243, 1) 36%, rgba(255, 0, 0, 1) 59%);
                         padding: 0.5rem;
                         width: 100%;
                     }
 
-                    .poke-pokemon-data-nombre-agua {
+                    .poke-pokemon-data-nombre-water {
                         @include flex (flex, space-evenly, center, row);
                         background-color: #488eea;
                         padding: 0.5rem;
@@ -246,43 +246,43 @@ main {
                         @include flex (flex, center, center, row);
                         flex-wrap: wrap;
 
-                        .pokemon-hierba {
+                        .pokemon-grass {
                             @extend %hierba;
                         }
 
-                        .pokemon-veneno {
+                        .pokemon-poison {
                             @extend %veneno;
                         }
 
-                        .pokemon-fuego {
+                        .pokemon-fire {
                             @extend %fuego;
                         }
 
-                        .pokemon-volador {
+                        .pokemon-flying {
                             @extend %volador;
                         }
 
-                        .pokemon-psiquico {
+                        .pokemon-psychic {
                             @extend %psiquico;
                         }
 
-                        .pokemon-hielo {
+                        .pokemon-ice {
                             @extend %hielo;
                         }
 
-                        .pokemon-agua {
+                        .pokemon-water {
                             @extend %agua;
                         }
 
-                        .pokemon-tierra {
+                        .pokemon-ground {
                             @extend %tierra;
                         }
 
-                        .pokemon-roca {
+                        .pokemon-rock {
                             @extend %roca;
                         }
 
-                        .pokemon-electrico {
+                        .pokemon-electric {
                             @extend %electrico;
                         }
                     }
