@@ -1,9 +1,14 @@
-
 const pokemonData = [];
 const url = "https://pokeapi.co/api/v2/pokemon/";
 const equipoPokemon = [];
+let debilidadesData;
 
-
+fetch('debilidades.json')
+    .then(response => response.json())
+    .then(data => {
+        debilidadesData = data;
+        cargarDatosPokemon();
+    });
 
 function cargarDatosPokemon() {
     for (let i = 1; i <= 151; i++) {
@@ -15,8 +20,6 @@ function cargarDatosPokemon() {
             });
     }
 }
-
-cargarDatosPokemon();
 
 const tarjetaPokemon = document.querySelector(".poke-pokemon");
 
@@ -33,11 +36,15 @@ function mostrarPokemon(pokemon) {
         pokemonID = "0" + pokemonID;
     }
 
+    let pokemonDebilidades = debilidadesData.find(entry => entry.nombre === pokemon.name);
+    let debilidades = pokemonDebilidades ? pokemonDebilidades.debilidades : [];
+
+
     div.innerHTML = `
     <div class="poke-pokemon-card fondo-${tipo[0]}">
         <div class="poke-pokemon-data">
             <div class="poke-pokemon-data-nombre-${typesClases}">
-                <h2 class="nombre">${pokemon.name.toUpperCase()}</h2>
+                <h2 class="nombre">${pokemon.name}</h2>
                 <p class="n-frente">#${pokemonID}</p>
             </div>
             <div class="poke-pokemon-data-ball">
@@ -55,7 +62,7 @@ function mostrarPokemon(pokemon) {
             <div class="poke-pokemon-data-types">
                 <p class="tipo">Debilidad: </p>
                 <div class="poke-pokemon-data-types-div">
-                    ${Array.isArray(pokemon.debilidad) ? pokemon.debilidad.map(debilidad => `<p class="pokemon-${debilidad}">${debilidad}</p>`).join('') : `<p class="pokemon-${pokemon.debilidad}">${pokemon.debilidad}</p>`}
+                ${debilidades.map(debilidad => `<p class="pokemon-${debilidad}">${debilidad}</p>`).join('')}
                 </div>
             </div>
             <div class="poke-pokemon-data-info">
@@ -69,7 +76,7 @@ function mostrarPokemon(pokemon) {
     </div>
     `;
     tarjetaPokemon.append(div);
-    
+
     const addEquipo = div.querySelectorAll(".agregar-equipo");
     addEquipo.forEach(button => {
         button.addEventListener("click", clickHandler);
@@ -85,10 +92,34 @@ function clickHandler(evt) {
     if (equipoPokemon.length < 6) {
         equipoPokemon.push(pokemon);
         localStorage.setItem("equipoPokemon", JSON.stringify(equipoPokemon));
-        alert("Tu Pokémon se ha añadido al equipo.");
+        Toastify({
+            text: "Tu Pokémon se ha añadido al equipo.",
+            duration: 3000,
+            destination: "https://pokeaki.netlify.app/pages/ficha",
+            newWindow: true,
+            close: true,
+            gravity: "bottom",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+        }).showToast();
         console.log(equipoPokemon);
         button.removeEventListener("click", clickHandler);
     } else {
-        alert("Tu equipo ya tiene 6 Pokémon. No puedes agregar más.");
+        Toastify({
+            text: "Tu equipo ya tiene 6 Pokémon. No puedes agregar más.",
+            duration: 3000,
+            destination: "https://pokeaki.netlify.app/",
+            newWindow: false,
+            close: true,
+            gravity: "bottom",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+            background: "linear-gradient(to right, #960000, #ff0000)",
+            },
+        }).showToast();
     }
 }

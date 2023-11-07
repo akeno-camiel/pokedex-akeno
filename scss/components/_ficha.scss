@@ -133,74 +133,178 @@
                 @include flex (flex, space-evenly, center, row);
                 width: 100%;
                 margin: 1rem 0 1rem 0;
+                background-color: rgba(182, 182, 182, 0.349);
+                border-radius: 25px;
+                padding: 5px;
 
-                .pokemon-hierba {
+                .pokemon-grass {
                     @extend %hierba;
                 }
 
-                .pokemon-veneno {
+                .pokemon-poison {
                     @extend %veneno;
+                }
+
+                .pokemon-fire {
+                    @extend %fuego;
+                }
+
+                .pokemon-flying {
+                    @extend %volador;
+                }
+
+                .pokemon-psychic {
+                    @extend %psiquico;
+                }
+
+                .pokemon-ice {
+                    @extend %hielo;
+                }
+
+                .pokemon-water {
+                    @extend %agua;
+                }
+
+                .pokemon-ground {
+                    @extend %tierra;
+                }
+
+                .pokemon-rock {
+                    @extend %roca;
+                }
+
+                .pokemon-electric {
+                    @extend %electrico;
+                }
+
+                .pokemon-bug{
+                    @extend %bicho;
+                }
+
+                .pokemon-normal{
+                    @extend %normal;
+                }
+
+                .pokemon-dragon{
+                    @extend %dragon;
+                }
+
+                .pokemon-fairy{
+                    @extend %hada;
+                }
+
+                .pokemon-steel{
+                    @extend %acero;
+                }
+
+                .pokemon-ghost{
+                    @extend %fantasma;
+                }
+
+                .pokemon-sinister{
+                    @extend %siniestro;
+                }
+
+                .pokemon-fighting{
+                    @extend %lucha;
                 }
             }
 
             .poke-equipo-data-debilidad {
                 grid-area: poke-equipo-data-debilidad;
                 @include flex (flex, space-evenly, center, row);
+                background-color: rgba(182, 182, 182, 0.349);
+                border-radius: 25px;
+                padding: 5px;
 
                 .poke-equipo-data-types-div {
                     @include flex (flex, center, center, row);
                     flex-wrap: wrap;
 
-                    .pokemon-hierba {
-                        @extend %hierba;
-                    }
+                    .pokemon-grass {
+                            @extend %hierba;
+                        }
 
-                    .pokemon-veneno {
-                        @extend %veneno;
-                    }
+                        .pokemon-poison {
+                            @extend %veneno;
+                        }
 
-                    .pokemon-fuego {
-                        @extend %fuego;
-                    }
+                        .pokemon-fire {
+                            @extend %fuego;
+                        }
 
-                    .pokemon-volador {
-                        @extend %volador;
-                    }
+                        .pokemon-flying {
+                            @extend %volador;
+                        }
 
-                    .pokemon-psiquico {
-                        @extend %psiquico;
-                    }
+                        .pokemon-psychic {
+                            @extend %psiquico;
+                        }
 
-                    .pokemon-hielo {
-                        @extend %hielo;
-                    }
+                        .pokemon-ice {
+                            @extend %hielo;
+                        }
 
-                    .pokemon-agua {
-                        @extend %agua;
-                    }
+                        .pokemon-water {
+                            @extend %agua;
+                        }
 
-                    .pokemon-tierra {
-                        @extend %tierra;
-                    }
+                        .pokemon-ground {
+                            @extend %tierra;
+                        }
 
-                    .pokemon-roca {
-                        @extend %roca;
-                    }
+                        .pokemon-rock {
+                            @extend %roca;
+                        }
 
-                    .pokemon-electrico {
-                        @extend %electrico;
-                    }
+                        .pokemon-electric {
+                            @extend %electrico;
+                        }
+
+                        .pokemon-bug{
+                            @extend %bicho;
+                        }
+
+                        .pokemon-normal{
+                            @extend %normal;
+                        }
+
+                        .pokemon-dragon{
+                            @extend %dragon;
+                        }
+
+                        .pokemon-fairy{
+                            @extend %hada;
+                        }
+
+                        .pokemon-steel{
+                            @extend %acero;
+                        }
+
+                        .pokemon-ghost{
+                            @extend %fantasma;
+                        }
+
+                        .pokemon-sinister{
+                            @extend %siniestro;
+                        }
+
+                        .pokemon-fighting{
+                            @extend %lucha;
+                        }
                 }
 
             }
 
             .poke-equipo-moves {
                 grid-area: poke-equipo-moves;
+                background-color: rgba(182, 182, 182, 0.349);
+                border-radius: 25px;
+                padding: 5px;
 
-                ul {
-                    list-style: none;
-                    text-align: left;
-                    padding-left: 30%;
+                p {
+                    text-transform: capitalize;
+                    display: flex;
                 }
             }
 
