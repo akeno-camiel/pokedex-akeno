@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon: 'error',
                 confirmButtonText: 'Aceptar'
             }).then((result) => {
-                if ( result.isConfirmed) {
+                if (result.isConfirmed) {
                     resetearDatos();
                 }
             });
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon: 'error',
                 confirmButtonText: 'Aceptar'
             }).then((result) => {
-                if ( result.isConfirmed) {
+                if (result.isConfirmed) {
                     resetearDatos();
                 }
             });
@@ -75,6 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("ojosInput").value = entrenador.ojos;
             document.getElementById("peloInput").value = entrenador.pelo;
         }
+        const nombreAlmacenado = localStorage.getItem("nombre");
+
+        if (nombreAlmacenado) {
+            nombreLink.textContent = nombreAlmacenado;
+        }
     }
 
     function resetearDatos() {
@@ -83,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("ojosInput").value = "";
         document.getElementById("peloInput").value = "";
         localStorage.removeItem("entrenador");
-        nombreLink.textContent = "Nombre";
+        nombreLink.textContent = "nombre";
     }
 
     cargarDatos();

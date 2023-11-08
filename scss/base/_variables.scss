@@ -5,12 +5,6 @@
     flex-direction: $direction ;
 }
 
-@mixin fuente ($fuente, $ancho, $size) {
-    font-family: $fuente;
-    font-weight: $ancho;
-    font-size: $size;
-}
-
 @mixin bg ($bg-position, $bg-size, $bg-repeat) {
     background-position: $bg-position;
     background-size: $bg-size;

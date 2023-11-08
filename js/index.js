@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const mostrarMenuBtn = document.querySelector(".mostrar-menu");
+    const menuRetractil = document.querySelector(".menu-retractil");
+
+    mostrarMenuBtn.addEventListener("click", function () {
+        menuRetractil.classList.toggle("busqueda-avanzada-activada");
+    });
+});
 
 
 const btnTipos = document.querySelectorAll(".btn-tipo");
@@ -5,13 +13,19 @@ const btnTipos = document.querySelectorAll(".btn-tipo");
 btnTipos.forEach(btnTipo => {
     btnTipo.addEventListener("click", () => {
         const tipoPoke = btnTipo.classList[1];
-        const resultados = pokemonData.filter(pokemon => {
-            const tipos = pokemon.types.map(type => type.type.name);
-            return tipos.includes(tipoPoke);
-        });
 
-        tarjetaPokemon.innerHTML = "";
-        resultados.forEach(pokemon => mostrarPokemon(pokemon));
+        if (tipoPoke === "all") {
+            tarjetaPokemon.innerHTML = "";
+            pokemonData.forEach(pokemon => mostrarPokemon(pokemon));
+        } else {
+            const resultados = pokemonData.filter(pokemon => {
+                const tipos = pokemon.types.map(type => type.type.name);
+                return tipos.includes(tipoPoke);
+            });
+
+            tarjetaPokemon.innerHTML = "";
+            resultados.forEach(pokemon => mostrarPokemon(pokemon));
+        }
     });
 });
 

@@ -10,6 +10,12 @@ const btnNext = document.querySelector(".siguiente");
 
 let buscarPokemon = 1;
 
+let nombre = localStorage.getItem("nombre");
+
+    if (nombre) {
+        let nombreLink = document.getElementById("nombreLink");
+        nombreLink.textContent = nombre;
+    }
 
 const fetchPokemon = async (pokemon) => {
     const API = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);

@@ -1,17 +1,17 @@
 main {
     .menu-retractil {
         position: relative;
-        @include flex (flex, center, flex-end, column);
+        @include flex (flex, flex-start, flex-end, column);
         padding: 2.5rem;
-        height: max-content;
-        box-shadow:
-            0px 16.7px 15.3px -43px rgba(0, 0, 0, 0.146),
-            0px 30.5px 42.2px -43px rgba(0, 0, 0, 0.21),
-            0px 40.4px 101.6px -70px rgba(0, 0, 0, 0.274);
+        height: 35vh;
+
+        &.busqueda-avanzada-activada {
+            display: none;
+        }
 
         .buscador-pokemon {
             position: absolute;
-            bottom: 2%;
+            bottom: 5%;
             left: 50%;
             transform: translateX(-35%);
 
@@ -94,6 +94,14 @@ main {
                 @extend %dragon;
             }
 
+            .all {
+                background-color: rgb(182, 17, 132);
+                border-radius: 100px;
+                padding: 0.25rem 0.5rem;
+                color: white;
+                margin-right: 5px;
+            }
+
             button {
                 border-radius: 100px;
                 border: none;
@@ -112,6 +120,23 @@ main {
         }
     }
 
+    .menu {
+        box-shadow: 1px 10px 16px -6px rgba(70, 69, 69, 0.7);
+        -webkit-box-shadow: 1px 10px 16px -6px rgba(70, 69, 69, 0.7);
+        -moz-box-shadow: 1px 10px 16px -6px rgba(70, 69, 69, 0.7);
+        
+        .mostrar-menu {
+            padding: 2rem 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding-left: 5%;
+            width: 98vw;
+            height: 7vh;
+        }
+    }
+
+
     .poke-pokemon {
         padding: 20px 0 0 40px;
         @include flex (flex, center, none, row);
@@ -119,6 +144,7 @@ main {
 
         .poke-card {
             margin: 50px;
+            text-transform: capitalize;
 
             .fondo-grass {
                 background-image: url(../img/fondo-hojas.jpg);
@@ -145,13 +171,13 @@ main {
                 @include bg (center, cover, none);
                 background-color: rgb(71, 147, 233)
             }
-            
+
             .fondo-ghost {
                 background-image: url(../img/fondo-fantasma.jpg);
                 @include bg (center, cover, none);
                 background-color: #835cc19a;
             }
-            
+
             .fondo-bug {
                 background-image: url(../img/fondo-bicho.jpg);
                 @include bg (center, cover, none);
@@ -199,16 +225,19 @@ main {
                 @include bg (center, cover, none);
                 background-color: #a4acaf8c;
             }
+
             .fondo-rock {
                 background-image: url(../img/fondo-roca.jpg);
                 @include bg (center, cover, none);
                 background-color: #a4acaf8c;
             }
+
             .fondo-ice {
                 background-image: url(../img/fondo-hielo.jpg);
                 @include bg (center, cover, none);
                 background-color: #a4acaf8c;
             }
+
             .fondo-dragon {
                 background-image: url(../img/fondo-dragon.jpg);
                 @include bg (center, cover, none);
@@ -517,7 +546,8 @@ main {
                         padding: 0.5rem;
                         width: 100%;
                     }
-                    h2{
+
+                    h2 {
                         text-transform: capitalize;
                     }
 
@@ -607,35 +637,35 @@ main {
                             @extend %electrico;
                         }
 
-                        .pokemon-bug{
+                        .pokemon-bug {
                             @extend %bicho;
                         }
 
-                        .pokemon-normal{
+                        .pokemon-normal {
                             @extend %normal;
                         }
 
-                        .pokemon-dragon{
+                        .pokemon-dragon {
                             @extend %dragon;
                         }
 
-                        .pokemon-fairy{
+                        .pokemon-fairy {
                             @extend %hada;
                         }
 
-                        .pokemon-steel{
+                        .pokemon-steel {
                             @extend %acero;
                         }
 
-                        .pokemon-ghost{
+                        .pokemon-ghost {
                             @extend %fantasma;
                         }
 
-                        .pokemon-sinister{
+                        .pokemon-sinister {
                             @extend %siniestro;
                         }
 
-                        .pokemon-fighting{
+                        .pokemon-fighting {
                             @extend %lucha;
                         }
                     }

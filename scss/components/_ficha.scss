@@ -117,6 +117,7 @@
                 background-color: #e2518e;
                 padding: 0.5rem;
                 width: 100%;
+                text-transform: capitalize;
             }
 
             .poke-equipo-img {
@@ -136,6 +137,7 @@
                 background-color: rgba(182, 182, 182, 0.349);
                 border-radius: 25px;
                 padding: 5px;
+                text-transform: capitalize;
 
                 .pokemon-grass {
                     @extend %hierba;
@@ -216,6 +218,7 @@
                 background-color: rgba(182, 182, 182, 0.349);
                 border-radius: 25px;
                 padding: 5px;
+                text-transform: capitalize;
 
                 .poke-equipo-data-types-div {
                     @include flex (flex, center, center, row);

@@ -39,55 +39,63 @@
 
                 .poke-pokedex-pokemon {
                     padding: 2px;
+
                     .poke-pokedex-pokemon-nombre {
                         text-transform: capitalize;
-                        
-                    font-size: 90%;
+
+                        font-size: 90%;
                     }
                 }
-                .poke-pokedex-pokemon-habilidad{
+
+                .poke-pokedex-pokemon-habilidad {
                     font-size: 100%;
                 }
+
                 .poke-pokedex-pokemon-descripcion {
                     font-size: 75%;
                     margin: 2px;
                 }
             }
         }
-        .formulario{
+
+        .formulario {
             position: absolute;
             bottom: 7%;
             left: 33%;
-            .buscador-pokedex{
+
+            .buscador-pokedex {
                 background-color: #5EC480;
                 width: 8vw;
                 height: 7vh;
                 border-radius: 12px;
             }
         }
-        .prev-next{
+
+        .prev-next {
             position: absolute;
             bottom: 8.2%;
             right: 29.4%;
             width: 17%;
             display: flex;
             gap: 1rem;
-            button{
+
+            button {
                 width: 55%;
                 height: 100%;
                 border: 2px solid black;
                 border-radius: 5px;
-                padding: 4%;
+                padding: 2.5%;
                 cursor: pointer;
                 text-transform: uppercase;
                 font-weight: 600;
                 background-color: #053f31;
                 color: white;
                 box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
-                &:active{
+
+                &:active {
                     box-shadow: inset -4px 4px 0 #222;
                     font-size: 0.9rem;
-                }     
+                }
             }
         }
 

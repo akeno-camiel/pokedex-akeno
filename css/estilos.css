@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Kawi:wght@400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 main .poke-pokemon .poke-card .poke-pokemon-data-back .poke-pokemon-data-info .pokemon-info {
   background-color: gray;
   border-radius: 100px;
@@ -140,20 +140,25 @@ header {
     list-style: none;
     padding-top: 15px; }
     header nav ul li a {
+      font-family: 'Sarabun', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: black;
       text-decoration: none; }
 
 main .menu-retractil {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
   flex-direction: column;
   padding: 2.5rem;
-  height: max-content;
-  box-shadow: 0px 16.7px 15.3px -43px rgba(0, 0, 0, 0.146), 0px 30.5px 42.2px -43px rgba(0, 0, 0, 0.21), 0px 40.4px 101.6px -70px rgba(0, 0, 0, 0.274); }
+  height: 35vh; }
+  main .menu-retractil.busqueda-avanzada-activada {
+    display: none; }
   main .menu-retractil .buscador-pokemon {
     position: absolute;
-    bottom: 2%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-35%); }
     main .menu-retractil .buscador-pokemon .buscador-pokemon-index {
@@ -166,6 +171,12 @@ main .menu-retractil {
     align-items: none;
     flex-direction: row;
     flex-wrap: wrap; }
+    main .menu-retractil .types .all {
+      background-color: #b61184;
+      border-radius: 100px;
+      padding: 0.25rem 0.5rem;
+      color: white;
+      margin-right: 5px; }
     main .menu-retractil .types button {
       border-radius: 100px;
       border: none;
@@ -179,6 +190,19 @@ main .menu-retractil {
         transform: scale(1.1);
         box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25); }
 
+main .menu {
+  box-shadow: 1px 10px 16px -6px rgba(70, 69, 69, 0.7);
+  -webkit-box-shadow: 1px 10px 16px -6px rgba(70, 69, 69, 0.7);
+  -moz-box-shadow: 1px 10px 16px -6px rgba(70, 69, 69, 0.7); }
+  main .menu .mostrar-menu {
+    padding: 2rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 5%;
+    width: 98vw;
+    height: 7vh; }
+
 main .poke-pokemon {
   padding: 20px 0 0 40px;
   display: flex;
@@ -187,7 +211,8 @@ main .poke-pokemon {
   flex-direction: row;
   flex-wrap: wrap; }
   main .poke-pokemon .poke-card {
-    margin: 50px; }
+    margin: 50px;
+    text-transform: capitalize; }
     main .poke-pokemon .poke-card .fondo-grass {
       background-image: url(../img/fondo-hojas.jpg);
       background-position: center;
@@ -721,7 +746,7 @@ main .poke-pokemon {
       height: 100%;
       border: 2px solid black;
       border-radius: 5px;
-      padding: 4%;
+      padding: 2.5%;
       cursor: pointer;
       text-transform: uppercase;
       font-weight: 600;
@@ -835,7 +860,8 @@ main .poke-pokemon {
         flex-direction: row;
         background-color: #e2518e;
         padding: 0.5rem;
-        width: 100%; }
+        width: 100%;
+        text-transform: capitalize; }
       .poke-equipo .poke-card .poke-equipo-card .poke-equipo-img {
         grid-area: poke-equipo-img;
         display: flex;
@@ -854,7 +880,8 @@ main .poke-pokemon {
         margin: 1rem 0 1rem 0;
         background-color: rgba(182, 182, 182, 0.349);
         border-radius: 25px;
-        padding: 5px; }
+        padding: 5px;
+        text-transform: capitalize; }
       .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad {
         grid-area: poke-equipo-data-debilidad;
         display: flex;
@@ -863,7 +890,8 @@ main .poke-pokemon {
         flex-direction: row;
         background-color: rgba(182, 182, 182, 0.349);
         border-radius: 25px;
-        padding: 5px; }
+        padding: 5px;
+        text-transform: capitalize; }
         .poke-equipo .poke-card .poke-equipo-card .poke-equipo-data-debilidad .poke-equipo-data-types-div {
           display: flex;
           justify-content: center;

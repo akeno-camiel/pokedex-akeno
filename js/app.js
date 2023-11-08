@@ -3,6 +3,13 @@ const url = "https://pokeapi.co/api/v2/pokemon/";
 const equipoPokemon = [];
 let debilidadesData;
 
+let nombre = localStorage.getItem("nombre");
+
+    if (nombre) {
+        let nombreLink = document.getElementById("nombreLink");
+        nombreLink.textContent = nombre;
+    }
+
 fetch('debilidades.json')
     .then(response => response.json())
     .then(data => {
@@ -102,7 +109,7 @@ function clickHandler(evt) {
             position: "right",
             stopOnFocus: true,
             style: {
-            background: "linear-gradient(to right, #00b09b, #96c93d)",
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
             },
         }).showToast();
         console.log(equipoPokemon);
@@ -118,7 +125,7 @@ function clickHandler(evt) {
             position: "right",
             stopOnFocus: true,
             style: {
-            background: "linear-gradient(to right, #960000, #ff0000)",
+                background: "linear-gradient(to right, #960000, #ff0000)",
             },
         }).showToast();
     }
